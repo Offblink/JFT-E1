@@ -15,7 +15,7 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!--
             延迟加载开关（老师的 mybatis-config.xml 里也有这两项）。本项目 lab01 没有嵌套 select，设不设都一样；
-            独立出去的第 5 章项目（JFT-Ch05）靠它把 @One/@Many 改成"用到才查"，两处配置保持一致：
+            第 5 章那个练习当时靠它把 @One/@Many 改成"用到才查"（该练习已删除），这里留着与老师 config 一致：
             lazyLoadingEnabled=true      —— 关联对象改成"用到才查"（默认 false 时，一取主对象就顺手把子查询发掉）
             aggressiveLazyLoading=false  —— 只加载"你真正访问的那个属性"，而不是整个对象的所有延迟属性。
                                             两个都开着（true/true）时，取 emp.getEmpName() 都会连带把关联对象查出来

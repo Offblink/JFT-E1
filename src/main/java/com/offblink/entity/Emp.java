@@ -14,8 +14,8 @@ import java.util.Date;
  * 注意：指导书原稿在 status 上加了 @TableLogic——status 是业务字段（1在职 0离职），
  * 照抄会把离职员工在 MP 查询里过滤"消失"，故不加（正确做法是独立 deleted 字段）
  *
- * 第 5 章关联映射用到的 deptId / deptInfo / skills 三个关联字段不在本类——那条线已独立为项目 `JFT-Ch05`，
- * 关联字段留在那边的 Emp 副本里，本类只保留实验一自己的表字段。
+ * 第 5 章关联映射用到的 deptId / deptInfo / skills 三个关联字段不在本类——那条线已于 2026-09-22
+ * 从工作区删除（留档包见 omp 技能 `mybatis01-ch5-relation-mapping`），本类只保留实验一自己的表字段。
  */
 @TableName("ssm_emp.employer")
 public class Emp {
