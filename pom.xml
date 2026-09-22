@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.offblink</groupId>
-    <artifactId>JFT-e1</artifactId>
+    <artifactId>JFT-E1</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>JFT-e1</name>
+    <name>JFT-E1</name>
     <packaging>war</packaging>
 
     <properties>

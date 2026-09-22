@@ -1,10 +1,10 @@
-# JFT-e1 · 实验一（MyBatis / MyBatis-Plus）+ 第 5 章关联映射
+# JFT-E1 · 实验一（MyBatis / MyBatis-Plus）+ 第 5 章关联映射
 
 《JAVA框架技术（一）》（AI 赋能版）课程项目。以 AI 辅助、人脑主导的方式完成，全程保留开发轨迹
 （Git 提交历史即过程记录）。
 
-**一个实验一个项目**：本项目是 **实验一**，因此叫 `JFT-e1`（本地目录 `~/IdeaProjects/JFT-e1`、
-Maven 坐标 `com.offblink:JFT-e1`、war 产物 `JFT-e1.war`），里面还带一条第 5 章「关联映射与多表查询」的专项练习线。
+**一个实验一个项目**：本项目是 **实验一**，因此叫 `JFT-E1`（本地目录 `~/IdeaProjects/JFT-E1`、
+Maven 坐标 `com.offblink:JFT-E1`、war 产物 `JFT-E1.war`），里面还带一条第 5 章「关联映射与多表查询」的专项练习线。
 后续的实验二（SSM 整合 + EMP MIS）会另起项目。
 注意两层命名不要混：`e1` = 实验一这个项目，`01` = 课程编号（课程仓 `Offblink/JFT-01` 收的是这门课的东西）。
 
@@ -26,7 +26,7 @@ Mapper 接口与它的 XML **同包同名**放在一起（`src/main/resources/co
 | 类别 | 选型 |
 |---|---|
 | 语言 / JDK | Java 8 语法目标（IDEA 运行 JDK 见下） |
-| 构建 | Maven 3.9.x（阿里云镜像），war 打包（产物 `JFT-e1.war`） |
+| 构建 | Maven 3.9.x（阿里云镜像），war 打包（产物 `JFT-E1.war`） |
 | 持久层 | MyBatis-Plus 3.5.3.1（内置 MyBatis 3.5.10，`EmpMapper extends BaseMapper`） |
 | 数据库 | MySQL 8/9（`mysql-connector-j` 8.0.33） |
 | 测试 | JUnit 4.13.2 |
