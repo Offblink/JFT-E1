@@ -28,7 +28,7 @@
     </appender>
 
     <!-- Mapper 包 DEBUG：输出 Preparing / Parameters / Total 行 -->
-    <!-- 级别覆盖整个 com.offblink，一次管住 lab01/chapter05 两包的 Mapper（MyBatis 按 namespace 打日志） -->
+    <!-- 级别覆盖整个 com.offblink，一次管住所有 Mapper 包（MyBatis 按 namespace 打日志） -->
     <logger name="com.offblink" level="DEBUG"/>
     <logger name="org.apache.ibatis" level="INFO"/>
 

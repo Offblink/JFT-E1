@@ -14,10 +14,11 @@
         <setting name="logImpl" value="SLF4J"/>
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!--
-            第 5 章注解版（@One/@Many 嵌套 select）需要这两项，老师 chapter05 的 mybatis-config.xml 里也有：
+            延迟加载开关（老师的 mybatis-config.xml 里也有这两项）。本项目 lab01 没有嵌套 select，设不设都一样；
+            独立出去的第 5 章项目（JFT-Ch05）靠它把 @One/@Many 改成"用到才查"，两处配置保持一致：
             lazyLoadingEnabled=true      —— 关联对象改成"用到才查"（默认 false 时，一取主对象就顺手把子查询发掉）
             aggressiveLazyLoading=false  —— 只加载"你真正访问的那个属性"，而不是整个对象的所有延迟属性。
-                                            两个都开着（true/true）时，取 emp.getEmpName() 都会连带把 deptInfo 查出来
+                                            两个都开着（true/true）时，取 emp.getEmpName() 都会连带把关联对象查出来
             XML 的嵌套结果（<association>/<collection> 内联列映射）不受影响：它本来就只有一条 SQL，没有延迟加载可言
         -->
         <setting name="lazyLoadingEnabled" value="true"/>
@@ -44,15 +45,14 @@
 
     <!--
         注册 Mapper（课件「方式2」：一条扫包，全部接口 + XML 一起注册）。
-        成立的前提是**每个 XML 都放在与接口同包的 resources/com/offblink/{lab01,chapter05}/ 下、与接口同名**——
-        （每个装着 Mapper 的包写一行，本项目＝实验一的 lab01 + 第5章的 chapter05）
+        成立的前提是**每个 XML 都放在与接口同包的 resources/com/offblink/lab01/ 下、与接口同名**——
+        （每个装着 Mapper 的包写一行；本项目只有 lab01）
         扫包时 MyBatis 按「接口全限定名 → 类路径同名资源」去找 XML，找不到就当纯注解接口处理；
         XML 放错位置（如搬到 resources/mapper/ 这种扁平目录）会在运行期报 Invalid bound statement (not found)，
         编译期不报错，所以挪 XML 时务必和这里同步。
     -->
     <mappers>
         <package name="com.offblink.lab01"/>
-        <package name="com.offblink.chapter05"/>
     </mappers>
 
 </configuration>
