@@ -14,7 +14,7 @@ Maven 坐标 `com.offblink:JFT-E1`、war 产物 `JFT-E1.war`），里面还带�
 com.offblink.entity     跨线共用实体：User / Vo（实验一）、Emp（两条线都用）、Dept / Skill（第 5 章）
 com.offblink.util       MyBatisUtil —— 会话工厂（通用工厂 + MP 分页专用工厂）
 com.offblink.lab01      实验一：UserMapper、UserMapperAnnotation、EmpMapper（MP 线）
-com.offblink.chapter05  第 5 章：EmpRelationMapper、DeptRelationMapper（XML + 注解两套关联查询）
+com.offblink.chapter05  第 5 章：EmpRelationMapper、DeptRelationMapper（XML + 注解两套关联查询）  ← 课件练习，不计入实验一
 ```
 
 Mapper 接口与它的 XML **同包同名**放在一起（`src/main/resources/com/offblink/<同一个包>/Xxx.xml`），
@@ -52,7 +52,11 @@ Mapper 接口与它的 XML **同包同名**放在一起（`src/main/resources/co
 - emp 载体（指导书任务 2/3 要求）：`ssm_emp.employer` 表 + `EmpMapper`（resultMap / sql 片段 / 批量插入 /
   `<foreach>` IN 按岗位查询 / 分号拼多条 UPDATE 的一次性批量更新）
 
-**第 5 章（`com.offblink.chapter05`，9 个用例）**
+**第 5 章（`com.offblink.chapter05`，9 个用例）——课件章节练习，不属于实验一交付**
+
+> 它借住在本项目里，是因为复用实验一的 `Emp`/`MyBatisUtil` 与 `ssm_emp` 库；课程评分表里只有实验一、实验二、
+> 课程项目三项，本章不计分。实验二（SSM 整合 + EMP MIS）立项时，这一包连同 `sql/第5章`、`docs/第5章` 一并搬过去。
+
 
 | 关系 | XML 方式（嵌套结果，1 条 SQL） | 注解方式（嵌套 select，1+N 条） |
 |---|---|---|

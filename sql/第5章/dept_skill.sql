@@ -1,4 +1,5 @@
 -- 第 5 章（关联映射与多表查询）业务载体：在实验一的 ssm_emp 库上补「能连表」的那几张表
+-- 定位：课件章节练习，不属于实验一交付；借住在实验一项目里只因复用它的库与实体，实验二立项时整体搬走
 -- 对应老师的 emp / dept / skill / emp_skill（本项目员工表按老师要求叫 employer）
 -- 与 ssm_emp.sql 一样做成可重复执行：建表用 IF NOT EXISTS，加列用 information_schema 先探再改
 
