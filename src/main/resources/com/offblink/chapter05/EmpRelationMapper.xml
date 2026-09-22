@@ -83,6 +83,7 @@
         <result property="salary" column="salary"/>
         <result property="hireDate" column="hire_date"/>
         <result property="status" column="status"/>
+
         <!-- 技能侧同样起别名：id/name 是两张表都有的通用列名，不起别名会和 emp_id/emp_name 撞车 -->
         <collection property="skills" ofType="Skill">
             <id property="id" column="skill_id"/>

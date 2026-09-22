@@ -126,7 +126,7 @@
         foreach 查询：按岗位集合 IN 查询（本次任务：一次查出「经理」和「销售员」）
         IN 括号里的元素个数随集合变化，没法用单个 ? 占位 → 只能靠 <foreach> 把集合摊成 (?, ?)。
         与上面的批量删除同一套路，两点差异：
-          · collection 对应接口上的 @Param("posts")（不写 @Param 单个集合参数要写 collection="list"）
+          · collection 对应接口上的 @Param("posts")（表示查询的集合名称）
           · item 是 String 不是对象，直接取值即可，没有 #{x.field} 这一层
         ORDER BY emp_id 只为输出顺序稳定，与查询语义无关。
     -->

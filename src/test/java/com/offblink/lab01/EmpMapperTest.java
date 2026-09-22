@@ -179,7 +179,7 @@ public class EmpMapperTest {
         Emp other = newEmp("IN演练工程师", "男", "研发部", "Java工程师", "12000");
         assertEquals(3, mapper.insertBatch(Arrays.asList(manager, salesman, other)));
 
-        // 集合里有几个岗位就摊出几个占位符：WHERE post IN (?, ?)
+        // 集合里有几个岗位就摊出几个占位符：WHERE post IN (?, ?) -> 这是foreach的作用
         List<Emp> hits = mapper.selectByPosts(Arrays.asList("经理", "销售员"));
         System.out.println("IN (经理, 销售员) 命中 " + hits.size() + " 条：");
         for (Emp e : hits) {
